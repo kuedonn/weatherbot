@@ -5,6 +5,8 @@ const { clientId, guildId } = require('./config.json');
 const dotenv  = require('dotenv');
 dotenv.config();
 
+//this is to create slash commands inside of discord on a server
+
 
 const commands = [
 	new SlashCommandBuilder().setName('ping').setDescription('Replies with pong!'),
