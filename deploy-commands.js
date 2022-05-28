@@ -6,6 +6,8 @@ const path = require('node:path');
 const dotenv  = require('dotenv');
 dotenv.config();
 
+//this is to create slash commands inside of discord on a server
+
 
 const commands = [];
 const commandsPath = path.join(__dirname, 'commands');
