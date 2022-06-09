@@ -24,7 +24,7 @@ module.exports = {
         async execute(interaction){
             const input = interaction.options.getString('input');
             //cannot read properties of undefined reading 'get' sto axios
-            await axios.get("https://api.openweathermap.org/data/2.5/forecast?q="+input+"&appid="+process.env.WEATHER_APPID+"&units=metric").then(response =>{
+            await axios.get("https://api.openweathermap.org/data/2.5/weather?q="+input+"&appid="+process.env.WEATHER_APPID+"&units=metric").then(response =>{
                 console.log(response.data);
             }).catch(err =>{(console.log(err))
             });
