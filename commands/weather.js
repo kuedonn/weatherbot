@@ -22,7 +22,6 @@ module.exports = {
             await axios.get("https://api.openweathermap.org/data/2.5/weather?q="+input+"&appid="+process.env.WEATHER_APPID+"&units=metric").then(response =>{  
                 const data = response.data;
                 console.log(data);
-
                 const embed = new MessageEmbed()
                 .setColor('#00FF99')
                 .setAuthor({name: 'Kuedon#4714', url:'https://github.com/kuedonn'})
@@ -38,10 +37,7 @@ module.exports = {
                 
                 
             }).catch(err =>{(console.log(err))
-            });
-            
-
-            
+            });  
                 
         },
 };
