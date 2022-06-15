@@ -1,4 +1,6 @@
-# discord-bot-wannabe
-Trying to create a bot using discord.js guide
+# weatherbot
+Created a bot using discord js guide.
+Its a weather bot created with discord js, node js and openweathermap API.
+Most of the index.js, some commands and the events are from the guide.
 
-will probably make the bot function as a weather app bot on commands using openweathermap API
+You can use /weather command and input any city thats on the OpenWeathermap API.
