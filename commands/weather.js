@@ -35,9 +35,7 @@ module.exports = {
                 interaction.reply({embeds: [embed] });
                 
                 
-            }).catch(err =>{(console.log(err))
-            });  
-                
+            }).catch(err =>console.log(err));            
         },
 };
 
