@@ -8,7 +8,7 @@ dotenv.config();
 
 
 module.exports = {
-    data: new SlashCommandBuilder()
+    data: new SlashCommandBuilder()          //create slash command
         .setName('weather')
         .setDescription('Shows weather in a specified location')
         .addStringOption(option =>
@@ -17,12 +17,11 @@ module.exports = {
             .setRequired(true)
         ),
         async execute(interaction){
-            const input = interaction.options.getString('input');
+            const input = interaction.options.getString('input'); //getting user input of the city
             await axios.get("https://api.openweathermap.org/data/2.5/weather?q="+input+"&appid="+process.env.WEATHER_APPID+"&units=metric").then(response =>{  
                 const data = response.data;
                 console.log(data);
-                const embed = new MessageEmbed()
-                .setColor('#00FF99')
+                const embed = new MessageEmbed() //create embed 
                 .setAuthor({name: 'Kuedon#4714', url:'https://github.com/kuedonn'})
                 .setTitle('Current Weather')
                 .addFields(
@@ -31,7 +30,7 @@ module.exports = {
                 {name: 'Temperature', value: (data.main.temp).toString()+'C'},
                 {name: 'Wind', value: (data.wind.speed).toString()+'m/s'},
                 {name: 'Humidity', value: (data.main.humidity).toString()+'%'})
-                .setFooter({text: 'Created by Kuedon 2022'});
+                .setFooter({text: 'Created by Kuedon#4714 2022'});
                 interaction.reply({embeds: [embed] });
                 
                 
